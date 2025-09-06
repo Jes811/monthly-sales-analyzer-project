@@ -46,6 +46,50 @@ def top_product(data):
     """Determines which product had the highest total sales in 30 days."""
     pass
 
+//we are randomly setting threshold to 300 here...could be ANY value we want it to be.
+threshold = 300
+
+//we want to set the days_above_threshold to zero before we start adding values...
+days_above_threshold(data, product_key, threshold) == 0
+
+
+//now we want to create a loop and loop through our data and perform functions/calculations 
+for day;day+1;day>20
+{
+    for product;product+1;product>3
+    {
+    total_sales_by_product(sales_data, "product_a") = total_sales_by_product(sales_data, "product_a") + 
+                                                        total_sales_by_product(sales_data, "product_a")
+     
+    total_sales_by_product_b(sales_data, "product_b") = total_sales_by_product_b(sales_data, "product_b") + 
+                                                        total_sales_by_product(sales_data, "product_b")
+    total_sales_by_product_c(sales_data, "product_c") = total_sales_by_product_c(sales_data, "product_c") + 
+                                                        total_sales_by_product(sales_data, "product_c")
+    if  number of sales from sales_data > threshold
+        days_above_threshold(sales_data, "product_a", threshold)  +1
+    endif
+
+    if total_sales_by_product(sales_data, "product_a") > best_selling_day(data)
+    {
+        best_selling_day(data) = total_sales_by_product(sales_data, "product_a")
+    }
+
+    if total_sales_by_product(sales_data, "product_b") > best_selling_day(data)
+    {
+        best_selling_day(data) = total_sales_by_product(sales_data, "product_b")
+    }
+
+    if total_sales_by_product(sales_data, "product_c") > best_selling_day(data)
+    {
+        best_selling_day(data) = total_sales_by_product(sales_data, "product_c")
+    }    
+}    
+
+average_daily_sales(sales_data, "product_a") = total_sales_by_product(sales_data, "product_a")/20
+average_daily_sales(sales_data, "product_b") = total_sales_by_product(sales_data, "product_b")/20
+average_daily_sales(sales_data, "product_c") = total_sales_by_product(sales_data, "product_c")/20
+
+
 
 
 # Function tests
